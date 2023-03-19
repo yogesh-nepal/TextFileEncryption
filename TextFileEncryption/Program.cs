@@ -10,13 +10,13 @@ namespace TextFileEncryption
             string filename = "D:\\[PROJECT]\\TextFileEncryption\\TextFileEncryption\\Data\\test.txt";// replace with your desired path
             string outputDir = "D:\\[PROJECT]\\TextFileEncryption\\TextFileEncryption\\Data\\testOutput.txt";
             int smallFileSize = 10 * 1024 * 1024;//10MB
+            int smallFileSizeMB = 10;//10MB
 
             int numberOfThreads = Environment.ProcessorCount;// use the number of available CPU cores
 
-            EncryptFiles.Encrypt(filename, outputDir, "abcdefghijabcdef", numberOfThreads, smallFileSize);
+            CreateFile.CreateNewTextFile(2048, numberOfThreads, smallFileSizeMB, filename);
 
-            Console.WriteLine("Encryption complete!");
-            Console.ReadKey();
+            EncryptFiles.Encrypt(filename, outputDir, "1fhgjt@3#klgv23g", numberOfThreads, smallFileSize);
 
             #region CREATING TEXT FILE
             //int fileSizeInMB = 2048;
